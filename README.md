@@ -1,1 +1,1 @@
-# react-native-chat
+# ionic-angular5-typescript-chat-app
