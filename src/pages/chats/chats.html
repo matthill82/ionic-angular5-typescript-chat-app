@@ -1,0 +1,39 @@
+<!--
+  Generated template for the ChatsPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar>
+    <ion-title>Chats</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <spinner *ngIf="showSpinner"></spinner>
+  <ion-list #scrollMe>
+    <ion-grid class="no-padding">
+      <ion-row *ngFor="let item of items | async" class="content--row">
+        <ion-col col-2 class="thumbnail--outer">
+          <ion-thumbnail>
+            <p class="thumbnail--inner" [ngStyle]="{'background-color': '#' + item.user?.bgColour}"><span>{{displayNameInitials(item.user?.displayName)}}</span></p>
+          </ion-thumbnail>
+        </ion-col>
+        <ion-col col-10 class="content--content">
+          <h5 class="content--title">{{ item?.messageText }}</h5>
+          <img *ngIf="item.photoUrl" class="img-responsive" src="{{item?.photoUrl}}" alt="" />
+          <p class="content--date">{{item.dateTimeAdded | date}}</p>
+          <ion-note class="content--username">{{ item.user?.displayName }}</ion-note>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-list>
+</ion-content>
+
+<ion-footer>
+  <ion-item>
+    <ion-input type="text" #chat id="chatMessage" (keyup.enter)="addChat(chat.value)" [(ngModel)]="valueOfInput" placeholder="Say something cool....."></ion-input>
+    <ion-icon ios="ios-camera" md="md-camera" item-right (click)="grabPicture()"></ion-icon>
+  </ion-item>
+</ion-footer>

@@ -1,0 +1,64 @@
+//.scroll-content {
+//  overflow: auto;  /* redundant, but just in case */
+//  display: flex; /* redundant, but just in case */
+//  flex-direction: column-reverse;
+//}
+
+page-chats {
+
+  .toolbar-background {
+    background-color: #1868C5;
+  }
+
+  .toolbar-title {
+    color: #ffffff;
+  }
+  .no-padding {
+    padding: 0;
+  }
+
+  .thumbnail--outer {
+    background-color: #bfbfbf;
+  }
+
+  .thumbnail--inner {
+    width: 65px;
+    height: 55px;
+    margin-top: 10px;
+    margin-left: 15px;
+
+    span {
+      font-size: 2em;
+      padding-top: 0.45em;
+      text-align: center;
+      display: flex;
+      justify-content: center;
+
+      color: white;
+    }
+  }
+
+  .content--content {
+    padding: 2rem 1.5rem 0 3.5rem;
+  }
+
+  .content--title {
+    font-size: 1.8rem;
+    letter-spacing: unset;
+  }
+
+  .content--date, .content--username {
+    margin: 0;
+  }
+
+  .overlay--left {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: #bfbfbf;
+    width: 18%;
+    opacity: .3;
+  }
+}

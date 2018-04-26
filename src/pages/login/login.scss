@@ -1,0 +1,65 @@
+page-login {
+  .abs-image {
+    background-size: contain;
+    max-width: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+  }
+  .scroll-content {
+    align-content: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .one, .two {
+    position: absolute;
+    color: white;
+    font-size: 4.25rem;
+  }
+
+  .one {
+    top: 22.5%;
+    left: 5%;
+  }
+
+  .two {
+    top: 34%;
+    left: 15%
+  }
+
+  .card-content-md, .card-content {
+    position: absolute;
+    width: 95%;
+    bottom: 20%;
+  }
+
+  ion-card.card {
+    box-shadow: none;
+    background: transparent;
+  }
+
+  .card-title {
+    color: white;
+    font-size: 10rem;
+    text-wrap: normal;
+  }
+
+  .icon {
+    padding-right: 10px;
+  }
+
+  .bottom {
+    bottom: 0;
+  }
+
+  .input-cover {
+    position: static;
+  }
+
+}
